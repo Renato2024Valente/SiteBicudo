@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Uso de Peças - Maker Bicudo 2024</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Controle de Uso de Peças </h1>
+        <h2> Robótica Bicudo-2024</h2>
+    </header>
+    <div class="container">
+        <div class="form-section">
+            <form id="controlForm">
+                <label for="studentName">Nome do Aluno:</label>
+                <input type="text" id="studentName" required>
+                
+                <label for="piece">Peça:</label>
+                <input type="text" id="piece" required>
+                
+                <button type="button" onclick="addRecord()">Registrar</button>
+            </form>
+        </div>
+
+        <div class="upload-section">
+            <label for="studentFile">Carregar Lista de Alunos:</label>
+            <input type="file" id="studentFile" accept=".txt" onchange="loadStudentList()">
+        </div>
+
+        <div id="records">
+            <h2>Registros</h2>
+            <ul id="recordList"></ul>
+        </div>
+
+        <div class="button-section">
+            <button onclick="printRecords()" class="print-button">Imprimir Registros</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
